@@ -1,4 +1,4 @@
-name: CD - Deploy to Server
+name: SSH TEST
 
 on:
     push:
@@ -10,6 +10,13 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
+            - name: Checkout code
+              uses: actions/checkout@v3
+
+            - name: Set up Node.js
+              uses: actions/setup-node@v3
+              with:
+                  node-version: "18"
             - name: Deploy via SSH
               uses: appleboy/ssh-action@v0.1.8
               with:
