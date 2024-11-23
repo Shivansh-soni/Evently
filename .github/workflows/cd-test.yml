@@ -24,6 +24,7 @@ jobs:
                   host: ${{ secrets.SERVER_HOST }}
                   username: ${{ secrets.SERVER_USER }}
                   password: ${{ secrets.SERVER_SSH_KEY }}
+                  fingerprint: ${{ secrets.SERVER_FINGERPRINT }}
                   port: 22
                   script: |
                       echo "Running commands on remote server"
